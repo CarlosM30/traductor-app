@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 
 // Ruta para la traduccion (por el momento es un placeholder)
 app.post('/translate', (req, res) => {
-    const {text, fromLang, toLang} = res.body; // Aqui se espera a recibir text, fronLang y toLang en el cuerpo de la solicitud
+    const {text, fromLang, toLang} = req.body; // Aqui se espera a recibir text, fronLang y toLang en el cuerpo de la solicitud
     console.log(`Solicitud de traducción: "${text}" de ${fromLang} a ${toLang}`);
 
     // Aqui va a ir la logica de traduccion real pero mas adelante
